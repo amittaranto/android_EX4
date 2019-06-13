@@ -9,14 +9,23 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Add Petek"
+        android:id="@+id/addPetek"
         android:onClick="addPetek"/>
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="start"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/test"/>
+        android:id="@+id/next"
+        android:layout_alignParentRight="true"
+        android:onClick="edit_screen_redirect"
+        android:text="Edit peteks"/>
+
+    <ListView
+        android:layout_below="@+id/addPetek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ptakim"></ListView>
 
 </RelativeLayout>

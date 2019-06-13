@@ -20,7 +20,7 @@ public class Petek {
 
     public Petek(Cursor c) {
         id = c.getInt(0);
-        content = c.getString(2);
+        content = c.getString(1);
     }
 
     public String getSQLInsertString(){

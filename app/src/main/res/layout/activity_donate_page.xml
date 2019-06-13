@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".donatePage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="donations:"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:id="@+id/titleDonation"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/donateInput"
+        android:layout_below="@id/titleDonation"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitBtn"
+        android:text="Donate"
+        android:textSize="14pt"
+        android:layout_below="@+id/donateInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:onClick="add_money"
+        />
+
+
+</RelativeLayout>
