@@ -3,22 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:background="@drawable/wall"
+
+
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleUsername"
-        android:textSize="14pt"
-        android:layout_marginTop="250dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
         android:text="Insert Username"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="14pt" />
 
     <EditText
         android:layout_below="@id/titleUsername"
         android:id="@+id/username"
+        android:hint="username"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -43,13 +50,15 @@
         android:id="@+id/password"
         android:layout_below="@+id/titlePassword"
         android:layout_centerHorizontal="true"
+        android:hint="password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
+        android:layout_marginTop="300dp"
         android:id="@+id/loginBtn"
         android:onClick="login"
-        android:layout_marginTop="500dp"
+        android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

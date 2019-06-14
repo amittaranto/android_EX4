@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wall"
     tools:context=".donatePage">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="donations:"
+        android:text="Donate:"
         android:textSize="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/titleDonation"
         />
 
@@ -22,6 +23,7 @@
         android:id="@+id/donateInput"
         android:layout_below="@id/titleDonation"
         android:layout_centerHorizontal="true"
+        android:hint="amount"
 
         />
 
@@ -33,9 +35,29 @@
         android:textSize="14pt"
         android:layout_below="@+id/donateInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="20dp"
         android:onClick="add_money"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall donations:"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/submitBtn"
+        android:id="@+id/titleDonationOverall"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/titleDonationOverall"
+        android:id="@+id/donationOverall"
+        />
 
 </RelativeLayout>
