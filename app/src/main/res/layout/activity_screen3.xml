@@ -30,6 +30,7 @@
         android:id="@+id/donate"
         android:text="Donate"
         android:textSize="15dp"
+        android:onClick="goto_donations"
         android:layout_alignParentRight="true"
         />
 
@@ -40,7 +41,7 @@
         android:text="Add petek"
         android:textSize="15dp"
         android:layout_alignParentLeft="true"
-        android:onClick="gotoadd"
+        android:onClick="goto_add"
         />
 
 

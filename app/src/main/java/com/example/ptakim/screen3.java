@@ -78,9 +78,14 @@ public class screen3 extends AppCompatActivity {
         ));
 }
 
-    public void gotoadd(View view) {
+    public void goto_add(View view) {
 
         Intent intent = new Intent(getApplicationContext(),screen2.class);
+        startActivity(intent);
+    }
+
+    public void goto_donations(View view) {
+        Intent intent = new Intent(getApplicationContext(),donatePage.class);
         startActivity(intent);
     }
 }
