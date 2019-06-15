@@ -14,7 +14,7 @@ android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="Insert New Petek"
-         />
+        android:textSize="14pt" />
 
 <EditText
     android:id="@+id/contentInput"
