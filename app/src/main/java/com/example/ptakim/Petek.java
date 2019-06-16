@@ -2,6 +2,7 @@ package com.example.ptakim;
 
 
 import android.database.Cursor;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,16 +12,16 @@ public class Petek {
     public int id;
     public String title;
     public String content;
-    public boolean status;
-    public long dateInMills;
+    public String status;
+    public long date;
 
     public Petek(){}
     public Petek(int id, String content, String title) {
         this.id = id;
         this.content = content;
         this.title = title;
-        dateInMills = Calendar.getInstance().getTimeInMillis();
-        status = true;
+        this.date = Calendar.getInstance().getTimeInMillis();
+        this.status = "sent";
     }
 
     public static String TABLE_NAME = "peteks";
@@ -29,7 +30,8 @@ public class Petek {
 
     public Petek(Cursor c) {
         id = c.getInt(0);
-        content = c.getString(1);
+        title = c.getString(1);
+        content = c.getString(2);
     }
 
     public String getSQLInsertString(){
@@ -37,10 +39,18 @@ public class Petek {
                 " (title, content) VALUES('" + title + "', '" + content + "')";
     }
 
+    public long is_editable(){
+        long diff = Calendar.getInstance().getTimeInMillis() - this.date;
+        diff =  diff / (1000*60*60*24);
+        if(diff < 2)
+            this.status = "received";
+        return diff;
+    }
+
     public static String SELECT_ALL =
             "SELECT * FROM " + TABLE_NAME;
 
     public String toString(){
-        return id + ", "+ title + ", " +  content;
+        return "id: " + id + ", title: "+ title + ", content: " +  content;
     }
 }

@@ -18,20 +18,20 @@ android:layout_height="match_parent"
 
     <EditText
     android:id="@+id/titleInput"
-    android:background="@android:color/holo_blue_light"
+    android:background="#f2f2f2"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="50dp"
-    android:hint = "Write title here"
+    android:hint = "    Write title here    "
     android:layout_below="@+id/titleContent"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 
     <EditText
     android:id="@+id/contentInput"
-    android:background="@android:color/holo_blue_light"
+    android:background="#f2f2f2"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="100dp"
-    android:hint = "Write petek here"
+    android:hint = "    Write petek here    "
     android:layout_below="@+id/titleContent"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
@@ -40,9 +40,10 @@ android:layout_height="match_parent"
     android:id="@+id/addContent"
     android:onClick="add_petek"
     android:layout_marginTop="340dp"
+    android:background="#ff751a"
     android:layout_centerHorizontal="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Add Petek"/>
+    android:text="        Add Petek        "/>
 
 </RelativeLayout>

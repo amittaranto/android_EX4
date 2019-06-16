@@ -10,7 +10,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Donate:"
+        android:text="    Donate:    "
+        android:background="#fff0e6"
         android:textSize="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
@@ -21,9 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/donateInput"
+        android:background="#fff0e6"
         android:layout_below="@id/titleDonation"
         android:layout_centerHorizontal="true"
-        android:hint="amount"
+        android:layout_marginTop="10dp"
+        android:hint="    amount    "
 
         />
 
@@ -31,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/submitBtn"
-        android:text="Donate"
+        android:text="    Donate    "
+        android:background="#70dbdb"
         android:textSize="14pt"
         android:layout_below="@+id/donateInput"
         android:layout_centerHorizontal="true"
@@ -42,9 +46,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Overall donations:"
+        android:text="    Overall donations:    "
         android:textSize="30dp"
         android:layout_centerHorizontal="true"
+        android:background="#ffd1b3"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/submitBtn"
         android:id="@+id/titleDonationOverall"
@@ -54,6 +59,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="30dp"
+        android:background="#ffd1b3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/titleDonationOverall"

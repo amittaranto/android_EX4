@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Add Petek"
+        android:background="#ff751a"
         android:id="@+id/addPetek"
         android:onClick="addPetek"/>
 
@@ -20,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/next"
+        android:background="#ff751a"
         android:layout_alignParentRight="true"
         android:onClick="edit_screen_redirect"
         android:text="Edit peteks"/>
@@ -27,6 +29,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#ff751a"
         android:id="@+id/don"
         android:layout_alignParentLeft="true"
         android:onClick="don_move"
@@ -35,6 +38,8 @@
     <ListView
         android:layout_below="@+id/addPetek"
         android:layout_width="wrap_content"
+        android:background="#6633cccc"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:id="@+id/ptakim"></ListView>
 

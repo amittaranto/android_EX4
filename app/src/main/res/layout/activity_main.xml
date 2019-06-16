@@ -12,18 +12,21 @@
 
     <TextView
         android:id="@+id/titleUsername"
+        android:background="#d6f5f5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
-        android:text="Insert Username"
+        android:text="    Insert Username    "
         android:textSize="14pt" />
 
     <EditText
         android:layout_below="@id/titleUsername"
         android:id="@+id/username"
-        android:hint="username"
+        android:hint="    username    "
+        android:layout_marginTop="10dp"
+        android:background="#eafafa"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
@@ -39,18 +42,21 @@
 
     <TextView
         android:id="@+id/titlePassword"
+        android:background="#d6f5f5"
         android:textSize="14pt"
         android:layout_width="wrap_content"
         android:layout_below="@id/blank"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Insert Password"/>
+        android:text="    Insert Password    "/>
 
     <EditText
         android:id="@+id/password"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/titlePassword"
         android:layout_centerHorizontal="true"
-        android:hint="password"
+        android:hint="    password    "
+        android:background="#eafafa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -60,6 +66,7 @@
         android:onClick="login"
         android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
+        android:background="#ff751a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"/>

@@ -49,13 +49,9 @@ public class screen2 extends AppCompatActivity {
                 android.R.id.text1,
                 peteks
         ));
-//        Context context = getApplicationContext();
-//        Toast toast = Toast.makeText(context, "petek_content", 3);
-//        toast.show();
 
-        if(cont!=null){
-//            toast = Toast.makeText(context, "in if statment ", 3);
-//            toast.show();
+
+        if(cont!=null && tit!=null){
             insertPetek(cont, tit);
         }
 
@@ -71,7 +67,7 @@ public class screen2 extends AppCompatActivity {
         Context context = getApplicationContext();
         Toast toast = Toast.makeText(context, id+ "", 3);
         toast.show();
-        Petek petek = new Petek(2000, petek_content, petek_title);
+        Petek petek = new Petek(id, petek_content, petek_title);
         db.getWritableDatabase().execSQL(petek.getSQLInsertString());
         peteks.add(petek);
     }
@@ -89,13 +85,6 @@ public class screen2 extends AppCompatActivity {
         return ++last_id;
     }
 
-    public void show_table(View view){
-       // Cursor c = db.getReadableDatabase().rawQuery(Petek.SELECT_ALL, null);
-        //TextView t = findViewById(R.id.table);
-        //c.moveToFirst();
-       // t.setText(c.getString(0));
-
-    }
 
     public void edit_screen_redirect(View view) {
         Intent intent = new Intent(getApplicationContext(),screen3.class);

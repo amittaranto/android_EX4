@@ -33,8 +33,8 @@ public class screen3 extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Petek ptk = peteks.get(position);
-                Calendar today = Calendar.getInstance();
-                long diff = today.getTimeInMillis() - ptk.dateInMills;
+                long l_petek = ptk.is_editable();
+                //Toast.makeText(screen3.this,Long.toString(l_petek),6).show();
                 int days = 2;
                 if( days<=2 ) {
                     Intent intent = new Intent(getApplicationContext(), update_petek.class);
@@ -42,7 +42,7 @@ public class screen3 extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else{
-                    ptk.status = false;
+                    ptk.status = "received";
                     Toast.makeText(screen3.this, "Older than two days.", 3);
                 }
             }
