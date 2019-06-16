@@ -29,7 +29,6 @@ public class update_petek extends AppCompatActivity {
 
         String editCMD = "UPDATE " + Petek.TABLE_NAME +
                 " SET content=" + content + " WHERE id="+ id +"";
-        Toast.makeText(context, id + "", 15).show();
         Cursor c  = db.getReadableDatabase().rawQuery(editCMD,null);
         c.moveToFirst();
         c.close();
