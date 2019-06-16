@@ -24,6 +24,14 @@
         android:onClick="edit_screen_redirect"
         android:text="Edit peteks"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/don"
+        android:layout_alignParentLeft="true"
+        android:onClick="don_move"
+        android:text="Donations"/>
+
     <ListView
         android:layout_below="@+id/addPetek"
         android:layout_width="wrap_content"

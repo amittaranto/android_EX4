@@ -16,10 +16,22 @@ android:layout_height="match_parent"
         android:text="Insert New Petek"
         android:textSize="14pt" />
 
-<EditText
+    <EditText
+    android:id="@+id/titleInput"
+    android:background="@android:color/holo_blue_light"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp"
+    android:hint = "Write title here"
+    android:layout_below="@+id/titleContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+    <EditText
     android:id="@+id/contentInput"
     android:background="@android:color/holo_blue_light"
     android:layout_centerHorizontal="true"
+    android:layout_marginTop="100dp"
+    android:hint = "Write petek here"
     android:layout_below="@+id/titleContent"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
