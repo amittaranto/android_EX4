@@ -7,10 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -25,6 +28,7 @@ public class screen2 extends AppCompatActivity {
         setContentView(R.layout.activity_screen2);
         Intent intent = getIntent();
         String cont = intent.getStringExtra("CONTENT");
+        String tit = intent.getStringExtra("TITLE");
         db = new DBHelper(this);
         ListView listView= findViewById(R.id.ptakim);
 
@@ -52,8 +56,9 @@ public class screen2 extends AppCompatActivity {
         if(cont!=null){
 //            toast = Toast.makeText(context, "in if statment ", 3);
 //            toast.show();
-            insertPetek(cont);
+            insertPetek(cont, tit);
         }
+
     }
 
     public void addPetek(View view) {
@@ -61,12 +66,12 @@ public class screen2 extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void insertPetek(String petek_content){
+    public void insertPetek(String petek_content, String petek_title){
         int id = get_last_element_id();
         Context context = getApplicationContext();
         Toast toast = Toast.makeText(context, id+ "", 3);
         toast.show();
-        Petek petek = new Petek(2000, petek_content);
+        Petek petek = new Petek(2000, petek_content, petek_title);
         db.getWritableDatabase().execSQL(petek.getSQLInsertString());
         peteks.add(petek);
     }
@@ -96,5 +101,10 @@ public class screen2 extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),screen3.class);
         startActivity(intent);
 
+    }
+
+    public void don_move(View view){
+        Intent intent = new Intent(getApplicationContext(),donatePage.class);
+        startActivity(intent);
     }
 }

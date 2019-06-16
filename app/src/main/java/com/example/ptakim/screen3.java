@@ -11,6 +11,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 public class screen3 extends AppCompatActivity {
 
@@ -26,32 +28,23 @@ public class screen3 extends AppCompatActivity {
 
         db = new DBHelper(this);
 
-
-//        Cursor c = db.getReadableDatabase().rawQuery(Petek.SELECT_ALL,
-//                null);
-//
-//        c.moveToFirst();
-//        while(!c.isAfterLast()){
-//            Petek p = new Petek(c);
-//            peteks.add(p);
-//            c.moveToNext();
-//        }
-//
-//
-//        listView.setAdapter(new ArrayAdapter<Petek>(
-//                this,
-//                android.R.layout.simple_list_item_1,
-//                android.R.id.text1,
-//                peteks
-//        ));
         update();
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent intent = new Intent(getApplicationContext(),update_petek.class);
-                intent.putExtra("ID", peteks.get(position).id);
-                startActivity(intent);
-//                update();
+                Petek ptk = peteks.get(position);
+                Calendar today = Calendar.getInstance();
+                long diff = today.getTimeInMillis() - ptk.dateInMills;
+                int days = 2;
+                if( days<=2 ) {
+                    Intent intent = new Intent(getApplicationContext(), update_petek.class);
+                    intent.putExtra("ID", peteks.get(position).id);
+                    startActivity(intent);
+                }
+                else{
+                    ptk.status = false;
+                    Toast.makeText(screen3.this, "Older than two days.", 3);
+                }
             }
     });
 
@@ -68,7 +61,6 @@ public class screen3 extends AppCompatActivity {
             peteks.add(p);
             c.moveToNext();
         }
-
 
         listView.setAdapter(new ArrayAdapter<Petek>(
                 this,

@@ -16,8 +16,10 @@ public class addPetek extends AppCompatActivity {
 
     public void add_petek(View view){
         EditText content_input = findViewById(R.id.contentInput);
+        EditText title_input = findViewById(R.id.titleInput);
         Intent intent = new Intent(getApplicationContext(),screen2.class);
         intent.putExtra("CONTENT",content_input.getText().toString());
+        intent.putExtra("TITLE",title_input.getText().toString());
         startActivity(intent);
     }
 }
